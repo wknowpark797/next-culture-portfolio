@@ -8,6 +8,9 @@ const nextConfig = {
 		includePath: [path.join(__dirname, 'styles')],
 		prependData: `@import "styles/_variables.scss";`,
 	},
+	images: {
+		domains: ['culture.seoul.go.kr'],
+	},
 	compiler: { styledComponents: true },
 };
 
