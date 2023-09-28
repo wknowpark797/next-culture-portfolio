@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Btn } from '@/components/atoms/Button/Btn';
 import { Input } from '@/components/atoms/Form/Input';
 import { Table } from '@/components/atoms/Table/Table';
+import { Pic } from '@/components/atoms/Pic/Pic';
 import { useState } from 'react';
 import clsx from 'clsx';
 import styles from './style.module.scss';
@@ -54,6 +55,13 @@ function index() {
 							},
 						]}
 					/>
+				</article>
+
+				<article>
+					<h2>Picture Component</h2>
+					<div className={clsx(styles.picFrame)}>
+						<Pic imgSrc={'/images/example.jpg'} imgAlt={'example.jpg'} priority={true} />
+					</div>
 				</article>
 			</section>
 		</>
