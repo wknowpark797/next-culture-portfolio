@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ClockLoader } from 'react-spinners';
+import { Loading } from '../Loading/Loading';
 import { useState } from 'react';
 import clsx from 'clsx';
 import styles from './Pic.module.scss';
@@ -19,16 +19,7 @@ export function Pic({ style, className, imgSrc, imgAlt, priority = false }) {
 			/>
 
 			{/* Image Loading */}
-			<ClockLoader
-				cssOverride={{
-					position: 'absolute',
-					top: '50%',
-					left: '50%',
-					transform: 'translate(-50%, -50%)',
-				}}
-				size={100}
-				loading={!IsLoaded}
-			/>
+			<Loading loading={!IsLoaded} />
 		</div>
 	);
 }
