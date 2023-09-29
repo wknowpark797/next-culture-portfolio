@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { Title } from '@/components/atoms/Text/Title';
+import { Text } from '@/components/atoms/Text/Text';
 import { Btn } from '@/components/atoms/Button/Btn';
 import { Input } from '@/components/atoms/Form/Input';
 import { Table } from '@/components/atoms/Table/Table';
@@ -19,6 +21,19 @@ function index() {
 
 			<section className={clsx(styles.dev)}>
 				<h1>Components Description</h1>
+
+				<article>
+					<h2>Title Component</h2>
+					<Title>Lorem ipsum dolor sit amet.</Title>
+				</article>
+
+				<article>
+					<h2>Text Component</h2>
+					<Text>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit assumenda mollitia tempora voluptatum
+						quia qui recusandae impedit tenetur totam.
+					</Text>
+				</article>
 
 				<article>
 					<h2>Button Component</h2>
