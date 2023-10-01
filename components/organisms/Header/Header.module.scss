@@ -1,0 +1,11 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #eee;
+	padding: 10px;
+
+	.logo {
+		font-size: 25px;
+	}
+}

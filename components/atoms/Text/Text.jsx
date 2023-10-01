@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Noto_Sans_KR } from 'next/font/google';
-import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import styles from './Text.module.scss';
 
@@ -14,15 +13,12 @@ const notoSans = Noto_Sans_KR({
 	adjustFontFallback: true,
 });
 
-export function Text({ style, className, tag = 'p', url, children }) {
-	const router = useRouter();
-	const currentPath = router.pathname;
-
+export function Text({ style, className, tag = 'p', isOn = false, url, children }) {
 	return React.createElement(
 		tag,
 		{
 			style,
-			className: clsx(styles.txt, className, notoSans.variable, currentPath === url ? styles.on : ''),
+			className: clsx(styles.txt, className, notoSans.variable, isOn && styles.on),
 		},
 		url ? React.createElement(Link, { href: url }, children) : children
 	);
