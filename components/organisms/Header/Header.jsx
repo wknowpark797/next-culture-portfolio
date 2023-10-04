@@ -6,11 +6,13 @@ import styles from './Header.module.scss';
 function Header() {
 	return (
 		<header className={clsx(styles.header)}>
-			<Title url={'/'} className={clsx(styles.logo)}>
-				CULTURES.
-			</Title>
+			<div className={clsx(styles.inner)}>
+				<Title url={'/'} className={clsx(styles.logo)}>
+					CULTURES.
+				</Title>
 
-			<Navbar names={['Find Culture', 'My Favorite', 'Dev']} />
+				<Navbar names={['Find Culture', 'My Favorite', 'Dev']} />
+			</div>
 		</header>
 	);
 }

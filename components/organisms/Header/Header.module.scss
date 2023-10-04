@@ -1,11 +1,29 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: #eee;
-	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
 
-	.logo {
-		font-size: 25px;
+	.inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 1200px;
+		height: 56px;
+		padding: 0 15px;
+		margin: 0 auto;
+
+		.logo {
+			font-size: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header {
+		.inner {
+			width: 100%;
+		}
 	}
 }
