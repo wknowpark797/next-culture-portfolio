@@ -6,7 +6,7 @@ function Footer() {
 	return (
 		<footer className={clsx(styles.footer)}>
 			<div className={clsx(styles.inner)}>
-				<Text>2023 All rights reserved.</Text>
+				<Text style={{ color: '#888' }}>2023 All rights reserved.</Text>
 			</div>
 		</footer>
 	);

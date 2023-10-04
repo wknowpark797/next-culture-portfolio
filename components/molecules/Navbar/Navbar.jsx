@@ -14,13 +14,13 @@ export function Navbar({ names }) {
 
 				if (path === url) {
 					return (
-						<Text key={url} tag={'span'} isOn={true}>
+						<Text key={url} tag={'span'} type={'nav'} isOn={true}>
 							{el}
 						</Text>
 					);
 				} else {
 					return (
-						<Text key={url} tag={'span'} url={`/${url}`}>
+						<Text key={url} tag={'span'} type={'nav'} url={`/${url}`}>
 							{el}
 						</Text>
 					);

@@ -23,7 +23,7 @@ export function MainSwiper({ list }) {
 				loop={true}
 				grabCursor={true}
 				slidesPerView={3}
-				spaceBetween={50}
+				spaceBetween={70}
 				centeredSlides={true}
 				onSlideChange={(el) => setIndex(el.realIndex)}
 			>
@@ -33,7 +33,7 @@ export function MainSwiper({ list }) {
 							{({ isActive, isPrev, isNext }) => {
 								return (
 									<div className={clsx(isActive && styles.on, isPrev && styles.prev, isNext && styles.next)}>
-										<Title>{item.TITLE}</Title>
+										<Title style={{ color: '#fff' }}>{item.TITLE}</Title>
 									</div>
 								);
 							}}
