@@ -1,12 +1,11 @@
 import Head from 'next/head';
+import { MainSwiper } from '@/components/organisms/Swiper/MainSwiper';
 import axios from 'axios';
-import Image from 'next/image';
 import clsx from 'clsx';
 import styles from './main.module.scss';
 
 export default function Home({ data }) {
 	const items = data.culturalEventInfo.row;
-	console.log(items);
 
 	return (
 		<>
@@ -15,18 +14,7 @@ export default function Home({ data }) {
 			</Head>
 
 			<main>
-				{items.map((item, idx) => {
-					return (
-						<article key={idx}>
-							<h1>{item.TITLE}</h1>
-							<p>{item.PLACE}</p>
-
-							<div className={clsx(styles.img)}>
-								<Image src={item.MAIN_IMG} alt={item.TITLE} priority fill objectFit='contain' />
-							</div>
-						</article>
-					);
-				})}
+				<MainSwiper list={items} />
 			</main>
 		</>
 	);
