@@ -1,0 +1,10 @@
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 10px;
+
+	span {
+		margin: 0 10px;
+	}
+}

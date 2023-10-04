@@ -1,10 +1,21 @@
 import Head from 'next/head';
 import Header from '@/components/organisms/Header/Header';
 import Footer from '@/components/organisms/Footer/Footer';
+import { Breadcrumb } from '@/components/molecules/Breadcrumb/Breadcrumb';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import styles from './Layout.module.scss';
 
 function Layout({ children }) {
+	const router = useRouter();
+	const [Path, setPath] = useState([]);
+
+	useEffect(() => {
+		const pathArr = router.asPath.split('/');
+		setPath(pathArr);
+	}, [router]);
+
 	return (
 		<div>
 			<Head>
@@ -16,7 +27,10 @@ function Layout({ children }) {
 			<div className={clsx(styles.layout)}>
 				<Header />
 
-				<section className={clsx(styles.content)}>{children}</section>
+				<section className={clsx(styles.content)}>
+					{router.asPath !== '/' && <Breadcrumb data={Path} />}
+					{children}
+				</section>
 
 				<Footer />
 			</div>
