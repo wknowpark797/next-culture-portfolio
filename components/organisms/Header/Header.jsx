@@ -3,11 +3,13 @@ import { Navbar } from '@/components/molecules/Navbar/Navbar';
 import clsx from 'clsx';
 import styles from './Header.module.scss';
 
-function Header({ blackLogo = false }) {
+// Default Header (Black Version Header)
+
+function Header({ whiteHeader = false }) {
 	return (
-		<header className={clsx(styles.header)}>
+		<header className={clsx(styles.header, whiteHeader && styles.whiteHeader)}>
 			<div className={clsx(styles.inner)}>
-				<Title url={'/'} className={clsx(styles.logo, blackLogo && styles.blackLogo)}>
+				<Title url={'/'} className={clsx(styles.logo, whiteHeader && styles.blackLogo)}>
 					CULTURES.
 				</Title>
 

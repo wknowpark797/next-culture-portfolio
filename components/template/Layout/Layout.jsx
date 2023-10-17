@@ -25,14 +25,14 @@ function Layout({ children }) {
 			</Head>
 
 			<div className={clsx(styles.layout, router.asPath === '/dev' && styles.whiteLayout)}>
-				<Header blackLogo={router.asPath === '/dev'} />
+				<Header whiteHeader={router.asPath === '/dev'} />
 
-				<section className={clsx(styles.content)}>
+				<section className={clsx(styles.content, router.asPath !== '/' && styles.subContent)}>
 					{router.asPath !== '/' && <Breadcrumb data={Path} />}
 					{children}
 				</section>
 
-				<Footer />
+				<Footer whiteFooter={router.asPath === '/dev'} />
 			</div>
 		</div>
 	);

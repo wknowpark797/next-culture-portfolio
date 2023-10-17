@@ -18,14 +18,16 @@ export function Breadcrumb({ data }) {
 
 				if (idx === data.length - 1) {
 					return (
-						<Text key={idx} isOn={true}>
+						<Text key={idx} type={'nav'} isOn={true}>
 							{result}
 						</Text>
 					);
 				} else {
 					return (
 						<Fragment key={idx}>
-							<Text url={`/${name}`}>{result ? result : 'Home'}</Text>
+							<Text type={'nav'} url={`/${name}`}>
+								{result ? result : 'Home'}
+							</Text>
 							<span> / </span>
 						</Fragment>
 					);

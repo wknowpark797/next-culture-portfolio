@@ -5,10 +5,6 @@
 	line-height: 1.7;
 	color: #333;
 
-	&.on {
-		color: orange;
-	}
-
 	a {
 		color: inherit;
 	}
@@ -16,5 +12,9 @@
 	&.txt-nav {
 		font-family: var(--font-notoSerif);
 		color: #888;
+	}
+
+	&.on {
+		color: orange;
 	}
 }

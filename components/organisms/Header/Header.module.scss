@@ -3,7 +3,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	background: #222;
 	z-index: 3;
+
+	&.whiteHeader {
+		background: #fff;
+	}
 
 	.inner {
 		display: flex;
