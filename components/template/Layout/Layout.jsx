@@ -24,8 +24,8 @@ function Layout({ children }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<div className={clsx(styles.layout)}>
-				<Header />
+			<div className={clsx(styles.layout, router.asPath === '/dev' && styles.whiteLayout)}>
+				<Header blackLogo={router.asPath === '/dev'} />
 
 				<section className={clsx(styles.content)}>
 					{router.asPath !== '/' && <Breadcrumb data={Path} />}
