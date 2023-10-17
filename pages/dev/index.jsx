@@ -10,7 +10,7 @@ import { useState } from 'react';
 import clsx from 'clsx';
 import styles from './style.module.scss';
 
-function index() {
+function Dev() {
 	const [InputValue, setInputValue] = useState('');
 
 	return (
@@ -91,4 +91,4 @@ function index() {
 	);
 }
 
-export default index;
+export default Dev;
